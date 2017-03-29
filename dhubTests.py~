@@ -1,0 +1,13 @@
+import unittests
+from selenium import webdriver
+
+class dHubTest(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        cls.driver = webdriver.Chrome()
+
+    def test_search(self):
+        self.driver.get('https://hub.docker.com/')
+        search_bar = driver.find_element_by_id('SearchBar__searchInput___34nC3')
+        
